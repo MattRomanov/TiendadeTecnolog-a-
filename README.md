@@ -21,5 +21,5 @@
 Si querés probarlo en tu máquina:
 1. Cloná el repositorio:
    ```bash
-   git clone <URL_DEL_REPOSITORIO>
+   git clone https://github.com/MattRomanov/tiendadetecnologia.git
 
