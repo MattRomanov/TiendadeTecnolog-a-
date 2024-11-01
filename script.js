@@ -12,7 +12,12 @@ function agregarCarrito(producto) {
     };
     
     if (productos[producto]) {
-        carrito.push({ nombre: producto, precio: productos[producto], cantidad: 1 });
+        const existingProductIndex = carrito.findIndex(item => item.nombre === producto);
+        if (existingProductIndex > -1) {
+            carrito[existingProductIndex].cantidad += 1; // Incrementa la cantidad si ya existe
+        } else {
+            carrito.push({ nombre: producto, precio: productos[producto], cantidad: 1 });
+        }
         localStorage.setItem('carrito', JSON.stringify(carrito));
         window.location.href = 'carrito.html'; // Redirige al carrito
     }
@@ -66,6 +71,12 @@ function vaciarCarrito() {
     carrito = [];
     localStorage.setItem('carrito', JSON.stringify(carrito));
     mostrarCarrito();
+}
+
+// Función de compra
+function comprar() {
+    alert('¡Gracias por tu compra!');
+    vaciarCarrito();
 }
 
 // Mostrar el carrito al cargar la página

@@ -111,4 +111,17 @@ footer {
     .producto {
         margin: 5px; 
     }
+
+    nav {
+        flex-direction: column; /* Enlaces en columna en móviles */
+        align-items: center; /* Centra los enlaces */
+    }
+
+    .grid-container {
+        grid-template-columns: 1fr; /* Una columna en móviles */
+    }
+
+    .btn {
+        width: 100%; /* Botones más anchos en móviles */
+    }
 }
