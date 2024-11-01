@@ -1,0 +1,103 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilos del header */
+header {
+    background-color: #007bff; 
+    color: white;
+    padding: 20px 0; 
+}
+
+/* Estilos de navegación */
+nav .nav-link {
+    color: white; 
+    margin: 0 15px; 
+}
+
+/* Secciones */
+section {
+    padding: 20px; /* Reducido para móviles */
+    margin: 10px 0; 
+    border-radius: 8px; 
+}
+
+/* Productos */
+.producto {
+    border: 1px solid #007bff; 
+    border-radius: 8px; 
+    padding: 15px; 
+    margin: 10px; 
+    text-align: center; 
+    transition: transform 0.2s; 
+}
+
+/* Efecto hover en productos */
+.producto:hover {
+    transform: scale(1.05); 
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px 0; 
+    background-color: #f1f1f1; 
+}
+
+/* Banner */
+.banner {
+    width: 100%; 
+    max-width: 600px; 
+    margin: 20px auto; 
+    border: 2px solid #f1f1f1; 
+    border-radius: 8px; 
+    overflow: hidden; 
+}
+
+.banner img {
+    width: 100%; 
+    height: auto; 
+    display: block; 
+}
+
+/* Grid de productos */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px; 
+}
+
+/* Estilos del carrusel */
+.carousel-inner img {
+    width: 100%; /* Asegura que la imagen ocupe el contenedor */
+    height: 300px; /* Ajusta la altura deseada */
+    object-fit: cover; /* Mantiene la proporción y recorta si es necesario */
+    margin: 0 auto; /* Centra la imagen */
+}
+
+/* Estilos para las flechas del carrusel */
+.carousel-control-prev, 
+.carousel-control-next {
+    background-color: rgba(0, 123, 255, 0.8); /* Color azul semi-transparente */
+    border-radius: 50%; /* Flechas redondeadas */
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: white; /* Fondo blanco para las flechas */
+    border-radius: 50%; /* Flechas redondeadas */
+}
+
+/* Media Queries para mejorar la experiencia en móviles */
+@media (max-width: 768px) {
+    section {
+        padding: 10px; /* Menos padding en móviles */
+    }
+
+    .producto {
+        margin: 5px; /* Menos margen en móviles */
+    }
+}
