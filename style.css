@@ -3,6 +3,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    /* Asegúrate de que la ruta de la imagen de fondo sea correcta */
     background: url('img/fondonavidad.jpg') no-repeat center center fixed;
     background-size: cover;
     color: #333; /* Color de texto ajustado para contraste */
@@ -52,6 +53,6 @@ footer {
 /* Media Queries */
 @media (max-width: 768px) {
     body {
-        background-size: auto;
+        background-size: auto; /* Asegura que la imagen de fondo se ajuste correctamente en pantallas pequeñas */
     }
 }
