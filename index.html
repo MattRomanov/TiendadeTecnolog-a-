@@ -4,13 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <script src="script.js"></script>
     <title>Tienda de Tecnología</title>
     <style>
         header {
             background-color: #007bff;
-            color: white;
+            color: rgb(78, 9, 110);
             padding: 20px 0;
         }
         section {
@@ -47,6 +48,27 @@
             height: 400px;
             object-fit: cover;
         }
+
+        /* Estilo para los copos de nieve */
+        .snowflake {
+            position: absolute;
+            top: -10px;
+            font-size: 20px;
+            color: white;
+            user-select: none;
+            z-index: 9999;
+            animation: fall 10s linear infinite;
+        }
+
+        /* Animación para que los copos caigan */
+        @keyframes fall {
+            0% {
+                transform: translateY(0);
+            }
+            100% {
+                transform: translateY(100vh);
+            }
+        }
     </style>
 </head>
 <body>
@@ -54,7 +76,7 @@
         <div class="container text-center">
             <h1>Tienda de Tecnología</h1>
             <div class="banner">
-                <img src="img/banner-descuento.jpg" alt="Banner de Descuento" class="img-fluid">
+                <img src="img/talento.jpeg" alt="navidad" class="img-fluid">
             </div>
             <nav class="nav justify-content-center">
                 <a class="nav-link text-white" href="#productos">Productos</a>
@@ -145,7 +167,7 @@
     <section id="musica" class="bg-light">
         <div class="container text-center">
             <h2>Música Lofi</h2>
-            <iframe width="100%" height="315" src="https://www.youtube.com/embed/jfKfPfyJRdk" title="Música Lofi" style="border: 0;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/K8yblgp-Tpo?si=KDVhpe3jjdUcuRHK" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </div>
     </section>
 
@@ -164,10 +186,13 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    <p>¡Bienvenido a nuestra tienda de tecnología! Acá podés encontrar los mejores dispositivos para hacer tu vida más fácil y entretenida. Nos enorgullece ofrecer productos de calidad y un servicio excepcional.</p>
-                    <p>Con más de 5 años en el mercado, nuestra reputación habla por sí sola. Nuestros clientes están satisfechos y vuelven una y otra vez por nuestra variedad y atención al detalle.</p>
-                    <p>Comprar en nuestra web es súper fácil. Solo elegís el producto que más te gusta, lo agregás al carrito y seguís las instrucciones. ¡Así de simple!</p>
-                    <p>No dudes en contactarnos si tenés alguna duda. ¡Estamos para ayudarte!</p>
+                    <p>¡Bienvenidos a nuestra tienda de tecnología!
+
+                        En nuestro sitio vas a encontrar los mejores productos tecnológicos para hacer tu vida más fácil y divertida. Desde smartphones hasta gadgets para tu hogar inteligente, tenemos todo lo que necesitas.
+                        
+                        Nos entendemos porque también somos fanáticos de la tecnología. Si tenés dudas, estamos para ayudarte en lo que necesites. ¡Acercate y descubrí lo que te estás perdiendo!
+                        
+                        Gracias por elegirnos. Acá, cada compra tiene el respaldo de un equipo comprometido con vos. ¡Te esperamos!.</p>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
@@ -175,6 +200,25 @@
             </div>
         </div>
     </div>
+
+    <!-- Efecto de nieve -->
+    <script>
+        const numFlakes = 100; // Número de copos de nieve
+        const snowContainer = document.body; // Asegura que se añadan a todo el body
+
+        // Generar los copos de nieve
+        for (let i = 0; i < numFlakes; i++) {
+            const snowflake = document.createElement('div');
+            snowflake.classList.add('snowflake');
+            snowflake.innerHTML = '❄'; // El símbolo de copo de nieve
+            snowflake.style.left = `${Math.random() * 100}vw`; // Posición aleatoria en el eje X
+            snowflake.style.top = `${Math.random() * 100}vh`;  // Posición aleatoria en el eje Y
+            snowflake.style.animationDuration = `${Math.random() * 3 + 2}s`; // Duración aleatoria de la caída
+            snowflake.style.animationDelay = `${Math.random() * 5}s`; // Retraso aleatorio antes de comenzar a caer
+            snowflake.style.fontSize = `${Math.random() * 10 + 10}px`; // Tamaño aleatorio del copo de nieve
+            snowContainer.appendChild(snowflake);
+        }
+    </script>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>

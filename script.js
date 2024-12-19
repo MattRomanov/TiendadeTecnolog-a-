@@ -83,3 +83,5 @@ function comprar() {
 if (document.title.includes('Carrito')) {
     mostrarCarrito();
 }
+
+

@@ -1,15 +1,22 @@
-/* Estilos generales con tema navideño */
+/* Estilos generales */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    /* Asegúrate de que la ruta de la imagen de fondo sea correcta */
-    background: url('img/fondonavidad.jpg') no-repeat center center fixed;
-    background-size: cover;
-    color: #333; /* Color de texto ajustado para contraste */
+    color: #333;
+    background-color: #f4f4f4;
 }
 
-/* Header navideño */
+/* Fondo de la página de carrito */
+#carrito {
+    background-image: url(img/fondo-blanco.png); 
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 50vh; /* Hace que el fondo cubra toda la altura de la ventana */
+}
+
+/* Header */
 header {
     background-color: #ff4d4d; /* Rojo navideño */
     color: white;
@@ -18,11 +25,15 @@ header {
     border-bottom: 5px solid #ffcc00; /* Toque de dorado */
 }
 
-/* Productos con borde navideño */
+/* Productos */
 .producto {
     border: 2px solid #ffcc00; /* Dorado */
     background-color: #fff;
     transition: transform 0.2s, background-color 0.3s;
+    padding: 15px;
+    margin: 10px;
+    text-align: center;
+    border-radius: 8px;
 }
 
 .producto:hover {
@@ -30,7 +41,7 @@ header {
     background-color: #ffe6e6; /* Rosa claro para efecto navideño */
 }
 
-/* Botones con tema festivo */
+/* Botones */
 .btn-primary {
     background-color: #ff4d4d; /* Rojo */
     border-color: #ffcc00; /* Dorado */
@@ -41,7 +52,7 @@ header {
     color: #ff4d4d; /* Texto rojo */
 }
 
-/* Footer decorativo */
+/* Footer */
 footer {
     text-align: center;
     padding: 20px 0;
@@ -50,9 +61,34 @@ footer {
     color: #333;
 }
 
+/* Grid de productos */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+/* Carrusel */
+.carousel-inner img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+
+/* Estilos del modal */
+.modal-content {
+    background-color: #ff4d4d;
+    color: white;
+}
+
 /* Media Queries */
 @media (max-width: 768px) {
     body {
-        background-size: auto; /* Asegura que la imagen de fondo se ajuste correctamente en pantallas pequeñas */
+        background-size: auto;
     }
 }
+
+
+
+
+
